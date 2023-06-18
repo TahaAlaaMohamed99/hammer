@@ -1,0 +1,44 @@
+html, .home { overflow: auto; overflow-x: hidden !important; }
+.master { *zoom: 1; clear: both; min-width: 280px; max-width: 1100px; margin-right: auto; margin-left: auto; padding-left: 30px; padding-right: 30px; }
+.master:after { content: ""; display: table; clear: both; }
+.un-underline { text-decoration: none; }
+.un-underline:hover { text-decoration: underline; }
+.scale { display: block; max-width: 100%; }
+/*The wrapping div surrounding the carousel. Needed to position absolute elements*/
+.paw-carousel-wrap { *zoom: 1; position: relative; margin-bottom: 20px; }
+.paw-carousel-wrap:after { content: ""; display: table; clear: both; }
+/*Transparent masks on either side of the carousel - remove if you don't need*/
+.paw-carousel-mask { position: absolute; height: 100%; width: 9999px; background: url(../img/trans-light.png); z-index: 103; top: 0; }
+.paw-carousel-mask-l { left: -9691px; }
+.paw-carousel-mask-r { right: -9691px; }
+/*Loading mask*/
+.paw-loading { z-index: 101; background-color: white; position: absolute; width: 100%; height: 100%; text-align: center; }
+.paw-loading .inner { position: absolute; top: 50%; width: 100%; margin-top: -30px; }
+.paw-loading p { margin-top: 5px; }
+/*Carousel*/
+.paw-carousel { position: relative; overflow: visible !important; margin-bottom: 160px; }
+.paw-carousel nav { position: absolute; top: 185px; z-index: 101; width: 100%; }
+.paw-carousel nav ul { list-style: none;}
+.paw-carousel nav ul li a {outline: none;}
+.paw-carousel-media { height: 100%; position: absolute; top: 40px !important; overflow: hidden; }
+.paw-carousel-item { display: inline; float: left; position: relative !important; text-align: center; height: 420px !important; z-index: 102; }
+.paw-carousel-item h3 { padding: 0; margin: 24px 0 0 0;}
+.paw-carousel-item a {color: #8A8B8B; outline: none; text-decoration: none;}
+.paw-carousel-item a:hover {text-decoration:none !important; color: #FF3B30; }
+.paw-carousel-item img { display: block; position: relative; z-index: 1; margin-right: 1px; }
+/*Next prev arrows*/
+.paw-carousel-prev, .paw-carousel-next { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90); opacity: 0.9; -webkit-transition-duration: 0.2s; -moz-transition-duration: 0.2s; -o-transition-duration: 0.2s; transition-duration: 0.2s; position: absolute; top: 300px; width: 50px; height: 50px; left: 339px; background: url(../img/arr-prev.png); z-index: 122 !important;}
+.paw-carousel-prev:hover, .paw-carousel-next:hover { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70); opacity: 0.7; }
+.paw-carousel-next { left: auto; right: 338px; background: url(../img/arr-next.png); }
+/*Thumbnail nav*/
+#paw-carousel-thumbs { *zoom: 1; text-align: center; margin-top: -86px; margin-bottom: 40px; }
+#paw-carousel-thumbs:after { content: ""; display: table; clear: both; }
+#paw-carousel-thumbs ul { margin: 0; padding: 0;}
+#paw-carousel-thumbs li { margin-right: 10px; margin-top: 10px; display: block; display: inline-block;  -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; background-color: #494a4c; height: 14px; width: 14px;}
+#paw-carousel-thumbs li:first-child { margin-right: 11px; }
+#paw-carousel-thumbs li:last-child { margin-right: 0; margin-left: 1px; }
+#paw-carousel-thumbs li:hover {background-color: #ff3b30; cursor: pointer; }
+#paw-carousel-thumbs li.active { background-color: #ff3b30; }
+#paw-carousel-thumbs li img { display: block; }
+/*At 1024px screen res stops the slideshow bleeding out it's container i.e. being full width*/
+@media only screen and (max-width: 1024px) { .paw-carousel { overflow: hidden !important; } }
